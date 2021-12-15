@@ -1,0 +1,8 @@
+<h1>Libraries</h1>
+<%= link_to "Create a libraries", new_library_path, class: "btn btn-success" %>
+
+<% @libraries.find_each do |library| %>
+  <%= link_to library do %>
+  <h2><%= library.name %> - <%= library.address %></h2>
+  <% end %>
+<% end %>

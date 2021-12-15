@@ -1,0 +1,5 @@
+<h1><%= @library.name %></h1>
+<h1><%= @library.address %></h1>
+<%= link_to "Update", edit_library_path, class: "btn btn-success" %>
+<%= link_to 'Destroy', @library, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+<%= link_to "Back to Libraries", libraries_path, class: "btn btn-primary" %>

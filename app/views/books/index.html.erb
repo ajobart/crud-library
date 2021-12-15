@@ -1,0 +1,9 @@
+<h1>Books</h1>
+
+<%= link_to "Create a book", new_book_path, class: "btn btn-success" %>
+
+<%= @books.find_each do |book| %>
+  <%= link_to book do %>
+  <h2><%= book.title %> - <%= book.author.last_name %></h2>
+  <% end %>
+<% end %>
